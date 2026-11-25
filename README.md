@@ -57,5 +57,8 @@ Agent instructions guide behavior but do not prove compliance. Use Risk-based Re
 ## Maintaining this template
 Copy the template for each new project; never develop an application inside the template itself. Never overwrite an existing project's rules with a newer template: compare the two, assess behavior and contract impact, and apply only approved changes.
 
+## License
+MIT. See [LICENSE](LICENSE).
+
 ## Security note
 Do not commit live credentials, customer data, copied proprietary textbooks, or private chat logs. Shared notes are generic actionable engineering rules, not a substitute for testing and code review.
