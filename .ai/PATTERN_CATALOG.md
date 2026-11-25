@@ -1,6 +1,6 @@
 # Optional Engineering Pattern Catalog
 
-**Do not load all patterns.** Always read `AGENTS.md`, relevant project constraints, then open the smallest matching set. Most tasks need one or two patterns; an explicitly listed bundle may need more. Each pattern is dormant until a task warrants it; architecture-changing patterns require user approval.
+**Second-hop index: open only after `.ai/ROUTER.md` points to a pattern.** **Do not load all patterns.** Always read `AGENTS.md`, relevant project constraints, then open the smallest matching set. Most tasks need one or two patterns; an explicitly listed bundle may need more. Each pattern is dormant until a task warrants it; architecture-changing patterns require user approval.
 
 모든 Pattern은 필수 Pattern Card와 Evidence Label(`[S]` Source-derived, `[R]` Engineering recommendation 등)을 따른다. Pattern Card는 적용 권한이 아니라 비교와 검증을 위한 metadata다.
 

@@ -1,5 +1,7 @@
 # Secret Scan Kit (optional, dormant)
 
+**검증 상태 (2026-11-25):** 확인함 - `actions/checkout@v5.1.0` 태그, Gitleaks `v8.30.1` 릴리스, 이미지 digest 일치, YAML/셸 문법. **미확인** - 실제 GitHub Runner 실행과 `test-local.sh` 실행(이 환경에 gitleaks 없음). 따라서 "권장 구성"이 아니라 "검증 전 후보"다: 처음 설치하는 프로젝트에서 `test-local.sh`와 첫 Actions 실행이 통과해야 신뢰한다.
+
 Gitleaks v8.30.1 기반. 이 폴더는 **복사 원본**이며 템플릿 자체에서는 아무것도 활성화되지 않는다(`.github/`, `.githooks/` 없음). 설치는 `docs/APPROVAL_POLICY.md`에 따라 사용자 승인 후 진행한다. 전체 폴더를 프로젝트에 복사하지 말고 아래 표의 파일만 복사한다.
 
 | 파일 | 복사 위치 | 비고 |
@@ -25,7 +27,7 @@ Gitleaks v8.30.1 기반. 이 폴더는 **복사 원본**이며 템플릿 자체�
 - 패턴 기반 검사이므로 100% 탐지를 보장하지 않는다. 압축/인코딩 깊이 2단계, 일부 바이너리/LFS/submodule/서버 보관 이력은 범위 밖이다.
 - 로컬 Hook은 우회 가능하고 PR 작성자가 워크플로/예외 설정을 바꿀 수 있다. 강제하려면 Ruleset + 관리자 검토(워크플로, `.gitleaks.toml`, `.gitleaksignore` 변경)가 필요하다.
 - Actions만으로는 최초 Push를 막지 못한다. 이미 커밋된 비밀은 `.gitignore`나 파일 삭제로 사라지지 않는다.
-- 이 kit의 YAML/셸 문법은 검사되었으나 실제 Runner 실행은 미검증이다. 최초 도입 시 `test-local.sh`와 첫 Actions 실행으로 확인하고 `actions/checkout`, Gitleaks 이미지 버전/digest를 그 시점에 재검증한다.
+- 위 "검증 상태"를 따른다. 새 버전으로 올릴 때는 `actions/checkout` 태그와 Gitleaks 이미지 digest를 그 시점에 다시 확인한다.
 
 ## 오탐 / 사고 대응
 - 검출 원문을 메신저·이슈에 붙여 넣지 않는다. 예외는 책임자 승인 + 근거 기록 + 좁은 규칙만. 전체 검사 비활성화 금지.

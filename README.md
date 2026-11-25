@@ -49,21 +49,13 @@ Ask for a feature -> evaluate a single-call/fixed-workflow/one-Agent baseline ->
 - Protect accepted requirements and baseline; approval before behavior/architecture/API/DB/security/UX/budget changes.
 - Prefer deterministic implementation over unnecessary LLM/agents; use measurable proof before adopting advanced patterns.
 - Never claim unexecuted tests passed. Preserve old fixes through regression tests and avoid irrelevant refactors.
-- `_master/TEMPLATE_CHANGELOG.md` (local only, not in the public repo) tracks changes to this template, while project `docs/DECISIONS.md` tracks actual project-specific decisions.
+- Project `docs/DECISIONS.md` tracks actual project-specific decisions.
 
 ## Rules are not enforcement
 Agent instructions guide behavior but do not prove compliance. Use Risk-based Review and reproducible QA by default, then add deterministic Tests, CI checks or Hooks only after the project Stack and critical paths are known. High/Critical changes require stronger evidence; simple changes should not automatically create extra Agent calls.
 
-## Local master and backup policy
-- The public GitHub repository is a mirror of the master **without `_master/`** (template-maintenance files stay local). Edit the local master, then push.
-- Keep one canonical Library Master named `ai-assisted-software-dev-template.zip`. The Agent materializes it to a temporary working directory, edits only relevant files, validates, then replaces the same Library file identity.
-- Library Version History is the normal rollback mechanism. Do not create a new version-named ZIP for every small update.
-- Create separate Snapshot files only for meaningful Milestones, major migrations or explicit user requests.
-- A temporary Agent workspace is not the source of truth because it may disappear between sessions.
-- If a persistent user-local environment is connected, a local Master Folder with local-only Git may replace the ZIP workflow without using GitHub.
-- Create new projects by copying the Master. Do not develop an application directly inside the Master.
-- Before changing the Master, confirm a recoverable Library version, Milestone Snapshot or local version-control checkpoint and record the revision in `_master/TEMPLATE_CHANGELOG.md`.
-- Never overwrite an existing project's rules with a newer template. Compare the two versions, assess behavior and contract impact, then apply only approved changes.
+## Maintaining this template
+Copy the template for each new project; never develop an application inside the template itself. Never overwrite an existing project's rules with a newer template: compare the two, assess behavior and contract impact, and apply only approved changes.
 
 ## Security note
 Do not commit live credentials, customer data, copied proprietary textbooks, or private chat logs. Shared notes are generic actionable engineering rules, not a substitute for testing and code review.

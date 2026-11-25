@@ -2,8 +2,9 @@
 
 ## Priority
 1. 최신 사용자 요청을 확인한다. 확정된 요구사항/승인 기록은 `docs/REQUIREMENTS.md`, `docs/DECISIONS.md`, `docs/BASELINE.md`에 있다.
-2. 충돌이 생기면 **임의로 기존 결정을 덮어쓰지 않는다**. 변경안을 제안하고 사용자에게 명시적 승인을 요청한다.
-3. 프로젝트의 현재 구현/테스트를 관찰한 사실과 추측을 구분한다. 문서와 코드가 다르면 보고한다.
+2. 사용자가 이번 요청에서 변경을 명시적으로 지시했다면 그것이 승인이다(`docs/APPROVAL_POLICY.md`). 같은 변경을 다시 묻지 말고 구현한다.
+3. 요청이 기존 확정 결정과 충돌하거나 요청 밖의 영향이 새로 드러나면 **임의로 기존 결정을 덮어쓰지 않는다**. 변경안을 제안하고 사용자에게 명시적 승인을 요청한다.
+4. 프로젝트의 현재 구현/테스트를 관찰한 사실과 추측을 구분한다. 문서와 코드가 다르면 보고한다.
 
 ## Mandatory Selective Context Loading
 - 작업 시작 시 `AGENTS.md`, 최신 사용자 요청, `docs/PROJECT.md`에서 현재 작업에 필요한 부분만 읽는다. 보호된 결정 확인이 필요할 때만 관련 `REQUIREMENTS`, `DECISIONS`, `BASELINE`, `ARCHITECTURE`, API/Schema/Security 문서를 추가로 연다.
@@ -17,7 +18,7 @@
 ## Before editing
 - 위 Selective Context Loading 순서로 요청에 관련된 파일만 읽고 필요한 Guide는 `.ai/ROUTER.md`로 찾는다.
 - 기존 구현, 중복 모듈, 의존 API/DB/UI/테스트를 파악하고 수정 범위를 최소화한다.
-- 변경이 승인된 기능, 공개 API, DB Schema, Permissions, 개인정보 처리, UX Policy, Security Policy, 비용, Architecture에 영향을 준다면 **중단 후 승인 요청**.
+- 변경이 승인된 기능, 공개 API, DB Schema, Permissions, 개인정보 처리, UX Policy, Security Policy, 비용, Architecture에 영향을 주고 **사용자가 이번 요청에서 그 변경을 명시적으로 지시하지 않았다면** 중단 후 승인 요청. 명시 지시가 있으면 구현하고, 요청에 없던 파급이 새로 드러날 때만 멈춘다.
 - 새로운 유료 서비스, 외부 데이터 전송, 추가 비용, 또는 기존 설계와 충돌하는 Framework/Pattern 도입은 구현 전에 승인받는다.
 - 승인 범위 밖의 삭제, 리팩터링, 대규모 라이브러리 교체, 외부 발송/결제/배포를 하지 않는다.
 

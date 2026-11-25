@@ -1,6 +1,6 @@
 # Mandatory Selective Context Router
 
-이 파일은 전체 문서를 읽기 위한 목차가 아니라 Context를 제한하기 위한 Router다. `AGENTS.md` + 최신 요청 + 관련 문서/코드만으로 충분하면 추가 Guide나 Pattern을 열지 않는다.
+이 파일은 전체 문서를 읽기 위한 목차가 아니라 Context를 제한하기 위한 **첫 번째 조회처(작업 -> 읽을 파일)**다. `.ai/PATTERN_CATALOG.md`는 여기서 Pattern이 필요하다고 판단된 뒤에만 여는 **Pattern 상세 색인(기본 결정, 승인 조건)**이다. 두 파일에 같은 규칙을 중복해 쓰지 않는다. `AGENTS.md` + 최신 요청 + 관련 문서/코드만으로 충분하면 추가 Guide나 Pattern을 열지 않는다.
 
 ## Loading sequence
 1. 현재 작업의 Requirement, 예상 변경 지점, 검증 기준을 한 문장씩 정한다.
