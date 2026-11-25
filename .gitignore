@@ -1,0 +1,43 @@
+# Secrets and local configs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+credentials.json
+secrets.json
+secrets/
+credentials/
+CLAUDE.local.md
+AGENTS.local.md
+# Python
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+# Node/build
+node_modules/
+.next/
+dist/
+build/
+coverage/
+# Local/IDE/OS
+.DS_Store
+.idea/
+.vscode/settings.json
+*.log
+# AI / generated large data
+.cache/
+models/
+checkpoints/
+*.parquet
+*.sqlite3
+*.db
+# local sample data (real data must not be committed)
+private_data/
