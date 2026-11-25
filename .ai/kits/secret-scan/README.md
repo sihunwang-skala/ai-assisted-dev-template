@@ -1,6 +1,6 @@
 # Secret Scan Kit (optional, dormant)
 
-**검증 상태 (2026-11-25):** 확인함 - `actions/checkout@v5.1.0` 태그, Gitleaks `v8.30.1` 릴리스, 이미지 digest 일치, YAML/셸 문법. **미확인** - 실제 GitHub Runner 실행과 `test-local.sh` 실행(이 환경에 gitleaks 없음). 따라서 "권장 구성"이 아니라 "검증 전 후보"다: 처음 설치하는 프로젝트에서 `test-local.sh`와 첫 Actions 실행이 통과해야 신뢰한다.
+**검증 상태 (2026-11-25):** 확인함 - `actions/checkout@v5.1.0` 태그, Gitleaks `v8.30.1` 릴리스, 이미지 digest 일치, YAML/셸 문법, 그리고 macOS에서 gitleaks 8.30.1로 `test-local.sh` 전 단계 통과(깨끗한 저장소 통과, 가짜 토큰 검출, Hook 차단, 삭제 후에도 이력 검출). **미확인** - 실제 GitHub Runner(Actions) 실행과 Windows/WSL. 따라서 로컬 Hook은 사용 가능하고, Actions 워크플로는 처음 설치하는 프로젝트의 첫 실행이 초록이어야 신뢰한다.
 
 Gitleaks v8.30.1 기반. 이 폴더는 **복사 원본**이며 템플릿 자체에서는 아무것도 활성화되지 않는다(`.github/`, `.githooks/` 없음). 설치는 `docs/APPROVAL_POLICY.md`에 따라 사용자 승인 후 진행한다. 전체 폴더를 프로젝트에 복사하지 말고 아래 표의 파일만 복사한다.
 

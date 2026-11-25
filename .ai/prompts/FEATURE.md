@@ -1,10 +1,13 @@
 # Prompt: Implement One Feature
 
+필수 (간단한 요청은 이 3칸이면 충분하다):
 Task: [ ]
-Related REQ/BASE IDs: [ ]
 Acceptance Criteria: [ ]
-Explicitly allowed changes: [ ]
 Out of scope: [ ]
+
+해당될 때만 채운다 (비워 두면 에이전트가 코드/문서에서 확인하고, 확인 못 하면 `확인 불가`로 보고):
+Related REQ/BASE IDs: [ ]
+Explicitly allowed changes: [ ]
 Risk: [Low / Medium / High / Critical] - [reason]
 Read first (파일 3~5개 이내, 읽지 않을 것은 제외): [ ]
 Critical boundaries touched: [payment / webhook / auth / credentials / migration / public API / external write / none]
